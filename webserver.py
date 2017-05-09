@@ -49,7 +49,7 @@ def map():
 
     gmap = gmplot.GoogleMapPlotter(lats[0], longs[0], 20)
     #gmap.scatter(lats, longs, "red", size=40, markers = True)
-    gmap.plot(lats, longs)
+    gmap.plot(lats, longs, 'cornflowerblue', edge_width=4)
     for i in range(len(lats)-1):
         gmap.circle(lats[i], longs[i], 2, 'blue')
         
