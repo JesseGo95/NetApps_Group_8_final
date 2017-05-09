@@ -14,12 +14,9 @@ Final Files-
 		
 **The Webserver is best ran simultaneously with database.py
 ****It is not real time; however whenever there is a GET request, it will update
-**gps_test.py is set to run whenever the tracer pi boots up.
+**gps_test.py is set to run whenever the tracer pi boots up. If having problems, just need to reboot tracer pi.
 
 We had troubles getting the gps module to work, mainly because it took too long to get a fix or to keep that fix.
 This is just the nature of the GPS module that we have no control over. 
-
-When running the tracer, we found it best that the xbee be unplugged when trying to get a fix.
-As soon as the gps module gets a fix, then we reconnec the xbee
 
 cleardb.py is just a script to clear db when run
