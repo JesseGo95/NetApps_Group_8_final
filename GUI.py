@@ -1,6 +1,7 @@
 import sys
 import pymongo
 from pymongo import MongoClient
+import PyQt4
 from PyQt4.QtGui import QApplication
 from PyQt4.QtCore import QUrl
 from PyQt4.QtWebKit import QWebView
