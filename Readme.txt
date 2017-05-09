@@ -16,3 +16,6 @@ Final Files-
 
 We had troubles getting the gps module to work, mainly because it took too long to get a fix or to keep that fix.
 This is just the nature of the GPS module that we have no control over. 
+
+When running the tracer, we found it best that the xbee be unplugged when trying to get a fix.
+As soon as the gps module gets a fix, then we reconnec the xbee
