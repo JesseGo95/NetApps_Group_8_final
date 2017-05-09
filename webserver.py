@@ -47,13 +47,13 @@ def map():
         lats.append(post["lat"])
         longs.append(post["long"])
 
-    gmap = gmplot.GoogleMapPlotter(lats[0], longs[0], 15)
+    gmap = gmplot.GoogleMapPlotter(lats[0], longs[0], 20)
     #gmap.scatter(lats, longs, "red", size=40, markers = True)
     gmap.plot(lats, longs)
     for i in range(len(lats)-1):
-        gmap.circle(lats[i], longs[i], 30, 'blue')
+        gmap.circle(lats[i], longs[i], 2, 'blue')
         
-    gmap.circle(lats[-1], longs[-1], 50, 'red')
+    gmap.circle(lats[-1], longs[-1], 3, 'red')
     gmap.draw("mymap.html")
     txt = insertapikey("mymap.html", "AIzaSyCN07DloisyucyBJcPLKfGvZDgqq0L-hCw")
     txt = txt.replace('async="defer"', "async defer")
