@@ -58,7 +58,7 @@ def map():
     txt = insertapikey("mymap.html", "AIzaSyCN07DloisyucyBJcPLKfGvZDgqq0L-hCw")
     txt = txt.replace('async="defer"', "async defer")
     txt = txt.replace('amp;',"")
-    print(txt)
+    #print(txt)
     return txt
 
 app.run(host='172.29.78.197')
