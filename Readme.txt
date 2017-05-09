@@ -10,6 +10,7 @@ Final Files-
 		Uses-pymongo, MongoClient, serial, and json libraries
 	webserver.py: On server pi; accesses MongoDB and plots coordinates into Google maps API, and produces html on server
 		Uses- Flask and Response (from flask library), os, pymongo, gmplot (Google maps api), time, MongoClient (from pymongo library), and BeautifulSoup (from bs4 library)
+        GUI.py: works similarly to webserver, just on lesser scale, and doesnt provide a server to view map
 		
 **The Webserver is best ran when database.py is finished running (manually with Ctrl+c)
 **gps_test.py is set to run whenever the tracer pi boots up.
@@ -19,3 +20,5 @@ This is just the nature of the GPS module that we have no control over.
 
 When running the tracer, we found it best that the xbee be unplugged when trying to get a fix.
 As soon as the gps module gets a fix, then we reconnec the xbee
+
+cleardb.py is just a script to clear db when run
