@@ -22,10 +22,17 @@ while True:
     line = x.split(",")
     data["time"] = time.strftime("%b %d %Y %H:%M:%S", datetime.utcnow().timetuple())
     try:
-        lat = float(line[3])/100
-        lon = float(line[5])/100
+        lat_D = float(line[3][0:2])
+        lat_M = float(line[3][2:])/60
+        lat = lat_D + lat_M
+        
+        lon_D = float(line[5][1:3])
+        lon_M = float(line[5][3:])/60
+        lon = lon_D + lon_M
     except:
         print ("ERROR: invalid data")
+        data["lat"] = 0
+        data["long"] = 0
         string = json.dumps(data)+"\n"
         xbee.write(string.encode())
         print(data)
