@@ -55,11 +55,9 @@ def map():
         
     gmap.circle(lats[-1], longs[-1], 50, 'red')
     gmap.draw("mymap.html")
-    txt = insertapikey("mymap.html", "AIzaSyBMO5Jv3pjPzIuGOUOcUbSVeyGCYeAQv-4LKDOee")
-    content = get_file('mymap.html')
-##    index = txt.find('async="defer"')
-##    if(index>0):
-##        txt[index:index+13]="async defer"
+    txt = insertapikey("mymap.html", "AIzaSyCN07DloisyucyBJcPLKfGvZDgqq0L-hCw")
+    txt = txt.replace('async="defer"', "async defer")
+    txt = txt.replace('amp;',"")
     print(txt)
     return txt
 
